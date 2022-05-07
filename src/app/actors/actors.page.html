@@ -1,0 +1,160 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Super-Man Actors</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!-- Home button -->
+  <ion-list>
+    <ion-item>
+      <ion-label [routerLink]="['/home']" routerDirection="backwards">Home Page</ion-label>
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <!-- card displaying actor info and rating options-->
+  <ion-card>
+    <img src="https://s2.r29static.com/bin/entry/5db/0,108,2000,2000/x,80/2026605/image.jpg">
+    <ion-card-header>
+      <ion-card-subtitle>39 Years Old</ion-card-subtitle>
+      <ion-card-title>Henry Cavil</ion-card-title>
+      <ion-card-title>You rated Henry Cavil:{{henryRating}}</ion-card-title>
+    </ion-card-header>    
+
+    <!-- buttons to select actor rating (applies to 3 below as well)-->
+    <ion-list>
+      <ion-radio-group [(ngModel)]="henryRating">
+        <ion-list-header>
+          <ion-label>How do you rate this actor</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Excellent</ion-label>
+          <ion-radio slot="start" value="Excellent"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Ok</ion-label>
+          <ion-radio slot="start" value="Ok"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Poor</ion-label>
+          <ion-radio slot="start" value="Poor"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-button (click)="saveHenryRating()">Save Choice</ion-button>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/C_Reeve_in_Marriage_of_Figaro_Opening_night_1985.jpg">
+    <ion-card-header>
+      <ion-card-subtitle>Deceased</ion-card-subtitle>
+      <ion-card-title>Christopher Reeve</ion-card-title>
+      <ion-card-title>You rated Christopher Reeve:{{christopherRating}}</ion-card-title>
+    </ion-card-header>   
+    
+    <ion-list>
+      <ion-radio-group [(ngModel)]="christopherRating">
+        <ion-list-header>
+          <ion-label>How do you rate this actor</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Excellent</ion-label>
+          <ion-radio slot="start" value="Excellent"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Ok</ion-label>
+          <ion-radio slot="start" value="Ok"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Poor</ion-label>
+          <ion-radio slot="start" value="Poor"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-button (click)="saveChristopherRating()">Save Choice</ion-button>
+
+  </ion-card>
+
+
+  <ion-card>
+    <img src="https://media.vanityfair.com/photos/5d322c1c7ff7570008cb1a0c/3:2/w_1998,h_1332,c_limit/brandon-routh-superman-arrow.jpg">
+    <ion-card-header>
+      <ion-card-subtitle>42 Years Old</ion-card-subtitle>
+      <ion-card-title>Brandon Routh</ion-card-title>
+      <ion-card-title>You rated Brandon Routh:{{brandonRating}}</ion-card-title>
+    </ion-card-header>   
+    
+    <ion-list>
+      <ion-radio-group [(ngModel)]="brandonRating">
+        <ion-list-header>
+          <ion-label>How do you rate this actor</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Excellent</ion-label>
+          <ion-radio slot="start" value="Excellent"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Ok</ion-label>
+          <ion-radio slot="start" value="Ok"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Poor</ion-label>
+          <ion-radio slot="start" value="Poor"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-button (click)="saveBrandonRating()">Save Choice</ion-button>
+
+  </ion-card>
+
+
+  <ion-card>
+    <img src="https://www.tvinsider.com/wp-content/uploads/2021/05/SML106b_0092r-scaled.jpg">
+    <ion-card-header>
+      <ion-card-subtitle>34 Years Old</ion-card-subtitle>
+      <ion-card-title>Tyler Hoechlin</ion-card-title>
+      <ion-card-title>You rated Tyler Hoechlin:{{tylerRating}}</ion-card-title>
+    </ion-card-header>    
+
+    <ion-list>
+      <ion-radio-group [(ngModel)]="tylerRating">
+        <ion-list-header>
+          <ion-label>How do you rate this actor</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Excellent</ion-label>
+          <ion-radio slot="start" value="Excellent"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Ok</ion-label>
+          <ion-radio slot="start" value="Ok"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Poor</ion-label>
+          <ion-radio slot="start" value="Poor"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-button (click)="saveTylerRating()">Save Choice</ion-button>
+
+  </ion-card>
+
+
+</ion-content>
